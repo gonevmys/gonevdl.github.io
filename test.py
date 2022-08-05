@@ -1,13 +1,4 @@
-# coding=utf-8
-import glob
-import os
-from PIL import Image
-
-
-path = './images/zxl.png'
-im = Image.open(path)
-size = 120, 120
-
-im.thumbnail(size)
-
-im.save('./images/nzxl.jpg', 'JPEG')
+with open('./src/test.txt', "r", encoding='utf-8') as f:
+    lines = f.readlines()
+    for l in lines:
+        print('"{a}"'.strip().format(a = l.strip()), end=", ")
